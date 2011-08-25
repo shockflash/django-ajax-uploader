@@ -4,3 +4,4 @@
 *.pyo
 *.swp
 pip-log.txt
+testapp/media/uploads

@@ -1,0 +1,12 @@
+
+1. Reupload an existing file should give it another filename, like it is normal in django.
+   Has to be done in Local-Backend
+
+2. Doc fixes:
+   - views.py use render_to, which is not part of django
+   - views.py example should use local demo and show how to use the backends
+   - template has no name in example, but is the import.html of views.py
+   - temmplate use jquery, but does not include it! 
+   - chromanos backend changes are not part of the doc
+   
+3. Include working testapp 

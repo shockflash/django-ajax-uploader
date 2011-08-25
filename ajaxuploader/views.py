@@ -5,6 +5,10 @@ from django.http import HttpResponse, HttpResponseBadRequest, Http404
 from ajaxuploader.backends.local import LocalUploadBackend
 
 class AjaxFileUploader(object):
+
+    """ files with the filename on success """
+    filename = None
+
     def __init__(self, backend=None, **kwargs):
         if backend is None:
             backend = LocalUploadBackend
@@ -57,5 +61,7 @@ class AjaxFileUploader(object):
             ret_json = {'success': success, 'filename': filename}
             if extra_context is not None:
                 ret_json.update(extra_context)
+
+            self.filename = filename
 
             return HttpResponse(json.dumps(ret_json))
